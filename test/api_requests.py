@@ -27,7 +27,7 @@ def get_weather(api_key: str, params) :
         response_weather = requests.get(url_weather, params=params_weather)
         if response_weather.status_code == 200 :
             data_weather = response_weather.json()
-            print(data_weather)
+            return data_weather
         else :
             print(f"Error:{response_weather.status_code}")
     else :
@@ -39,3 +39,4 @@ temperature_location = outpout_weather["main"]["temp"]
 pressure_location = outpout_weather["main"]["pressure"]
 humidity_location = outpout_weather["main"]["humidity"]
 wind_speed = outpout_weather["wind"]["speed"]
+print(weather_description)

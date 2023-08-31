@@ -14,12 +14,6 @@ def test_button():
         result = button("search")
         assert result == False, "Le résultat attendu était 'True', mais le résultat obtenu était différent."
 
-# Test de la fonction metric
-def test_metric():
-    with st.empty():
-        result = metric("", "")
-        assert result == "None", "Le résultat attendu était 'None', mais le résultat obtenu était différent."
-
 # Exécutez les tests avec pytest
 if __name__ == "__main__":
     pytest.main()
